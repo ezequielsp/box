@@ -6,8 +6,8 @@ echo "--- Updating packages list ---"
 sudo apt-get update
 
 echo "--- MySQL time ---"
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password pass'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password pass'
 
 echo "--- Installing base packages ---"
 sudo apt-get install -y vim curl python-software-properties
